@@ -159,7 +159,7 @@ $ mvn release:prepare
 [INFO] Working directory: C:\Users\pinm\code\github\java-helloworld-app
 [INFO] Checking dependencies and plugins for snapshots ...
 What is the release version for "java-helloworld-app"? (com.mwit.javaapp:java-helloworld-app) 1.0: :
-What is SCM release tag or label for "java-helloworld-app"? (com.mwit.javaapp:java-helloworld-app) java-helloworld-app-1.0: :
+What is SCM release tag or label for "java-helloworld-app"? (com.mwit.javaapp:java-helloworld-app) java-helloworld-app-1.0: : 1.0
 What is the new development version for "java-helloworld-app"? (com.mwit.javaapp:java-helloworld-app) 1.1-SNAPSHOT: :
 ......
 ```
