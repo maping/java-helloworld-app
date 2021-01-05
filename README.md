@@ -139,11 +139,41 @@ release.properties
 ```
 ### 7.2 Modify pom.xml
 
-### 7.3 Release
+### 7.3 Prepare Release
 Before release, you much git push all local code to remote repo.
+```console
+$ mvn release:prepare
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------------< com.mwit.javaapp:java-helloworld-app >----------------
+[INFO] Building java-helloworld-app 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-release-plugin:2.5.3:prepare (default-cli) @ java-helloworld-app ---
+[INFO] Verifying that there are no local modifications...
+[INFO]   ignoring changes on: **\pom.xml.next, **\release.properties, **\pom.xml.branch, **\pom.xml.tag, **\pom.xml.backup, **\pom.xml.releaseBackup
+[INFO] Executing: cmd.exe /X /C "git rev-parse --show-toplevel"
+[INFO] Working directory: C:\Users\pinm\code\github\java-helloworld-app
+[INFO] Executing: cmd.exe /X /C "git status --porcelain ."
+[INFO] Working directory: C:\Users\pinm\code\github\java-helloworld-app
+[INFO] Checking dependencies and plugins for snapshots ...
+What is the release version for "java-helloworld-app"? (com.mwit.javaapp:java-helloworld-app) 1.0: :
+What is SCM release tag or label for "java-helloworld-app"? (com.mwit.javaapp:java-helloworld-app) java-helloworld-app-1.0: :
+What is the new development version for "java-helloworld-app"? (com.mwit.javaapp:java-helloworld-app) 1.1-SNAPSHOT: :
+......
+```
+>Attention: Run `mvn release:rollback` if you find someting wrong. This will delete release.properties and pom.xml.releaseBackup file, but won't delete Tag (local and remote).
 
+### 7.4 Perform Release
+```console
+$ mvn release:perform
+```
+Click "Artifacts", found "com.mwit.javaapp:java-helloworld-app Version 1.0-SNAPSHOT" replaced with "Version 1.0".
 
-
+### 7.5 Create a branch based on a Tag
+```console
+$ git checkout -b release/1.0 1.0
+```
 ## 8. Delete repo
 Click repo "maping/java-helloworld-app", then click "Settings", then drop down to "Danger Zone", click "Delete this repository".
 
