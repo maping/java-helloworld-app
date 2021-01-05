@@ -1,5 +1,6 @@
 # A Java Hello World Application
 [![Build status](https://dev.azure.com/maping930883/java-helloworld-app/_apis/build/status/java-helloworld-app-Maven-CI)](https://dev.azure.com/maping930883/java-helloworld-app/_build/latest?definitionId=31)
+[![com.mwit.javaapp:java-helloworld-app package in java-helloworld-app feed in Azure Artifacts](https://feeds.dev.azure.com/maping930883/53efbb4b-72b2-4702-b8d6-89bbb2cf98df/_apis/public/Packaging/Feeds/89aaf492-32ba-4468-87bf-5a1824ae8b94/Packages/331ed1fd-af93-4e04-b0b8-7a265c6a09f4/Badge)](https://dev.azure.com/maping930883/java-helloworld-app/_packaging?_a=package&feed=89aaf492-32ba-4468-87bf-5a1824ae8b94&package=331ed1fd-af93-4e04-b0b8-7a265c6a09f4&preferRelease=true)
 
 ## 1. Create a repo manually
 
@@ -172,7 +173,7 @@ Click "Artifacts", found "com.mwit.javaapp:java-helloworld-app Version 1.0-SNAPS
 
 >Question: Why can not preserve the old verpreserve on Azure Artifacts.
 
->注意：手动删除 "Artifacts" 中的构件，会导致部署同版本的构件失败，好像 "Artifacts" 在哪里记录了所有的发布的构件，所以尽量一次做对。
+>Attention: Once you publish a particular version of a package to a feed, that version number is permanently reserved. You cannot upload a newer revision package with that same version number, or delete it and upload a new package at the same version.
 
 ### 7.5 Create a branch based on a Tag
 mvn release does NOT create branch，you need do it manually.
@@ -186,3 +187,4 @@ Click repo "maping/java-helloworld-app", then click "Settings", then drop down t
 
 # Reference
 1. https://www.cnblogs.com/cowboys/p/10400784.html
+2. https://docs.microsoft.com/en-us/azure/devops/artifacts/artifacts-key-concepts?view=azure-devops
