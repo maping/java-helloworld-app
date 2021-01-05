@@ -3,7 +3,7 @@
   <groupId>com.mwit.javaapp</groupId>
   <artifactId>java-helloworld-app</artifactId>
   <packaging>jar</packaging>
-  <version>1.4-SNAPSHOT</version>
+  <version>1.5-SNAPSHOT</version>
   <name>java-helloworld-app</name>
   <url>http://maven.apache.org</url>
 
