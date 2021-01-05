@@ -170,6 +170,8 @@ $ mvn release:perform
 ```
 Click "Artifacts", found "com.mwit.javaapp:java-helloworld-app Version 1.0-SNAPSHOT" replaced with "Version 1.0".
 
+>Question: Why can not preserve the old verpreserve on Azure Artifacts.
+
 >注意：手动删除 "Artifacts" 中的构件，会导致部署同版本的构件失败，好像 "Artifacts" 在哪里记录了所有的发布的构件，所以尽量一次做对。
 
 ### 7.5 Create a branch based on a Tag
