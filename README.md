@@ -116,6 +116,36 @@ Add the server to your settings.xml's "servers" sections.
 $ mvn clean package
 $ mvn deploy
 ```
+Click "Artifacts", "com.mwit.javaapp:java-helloworld-app Version 1.0-SNAPSHOT" shows up.
 
-## 7. Delete repo
+## 7. Replease 1.0
+### 7.1 Add .gitignore file
+```code
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+.settings
+.vscode
+.classpath
+.project
+release.properties
+```
+### 7.2 Modify pom.xml
+
+### 7.3 Release
+Before release, you much git push all local code to remote repo.
+
+
+
+## 8. Delete repo
 Click repo "maping/java-helloworld-app", then click "Settings", then drop down to "Danger Zone", click "Delete this repository".
+
+# Reference
+1. https://www.cnblogs.com/cowboys/p/10400784.html
