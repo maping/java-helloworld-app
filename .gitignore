@@ -12,3 +12,4 @@ buildNumber.properties
 .vscode
 .classpath
 .project
+release.properties
