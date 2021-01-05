@@ -181,6 +181,10 @@ mvn release does NOT create branch，you need do it manually.
 $ git checkout -b release/1.0 1.0
 $ git push origin release/1.0:release/1.0
 ```
+Switch back to main branch
+```console
+$ git checkout main
+```
 
 ## 8. Delete repo
 Click repo "maping/java-helloworld-app", then click "Settings", then drop down to "Danger Zone", click "Delete this repository".
